@@ -120,6 +120,7 @@ public class DocumentParser_multi_nio_paragraph_ALLINONE {
                 Throwable var13 = null;
 
                 try {
+                    allInOne_Index.clear();
                     ByteBuffer byteBuffer2 = ByteBuffer.allocate((int)Files.size(path));
                     channel1.read(byteBuffer2);
                     byteBuffer2.flip();
@@ -302,6 +303,8 @@ public class DocumentParser_multi_nio_paragraph_ALLINONE {
                 var44.printStackTrace();
             }
             return true;
+
+
         }).collect(Collectors.toList());
 
         // 단어별 df 확인
