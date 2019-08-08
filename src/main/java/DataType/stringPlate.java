@@ -12,6 +12,7 @@ public class stringPlate {
     private int offset = 0;
     private int tf = 0;
     private int df = 0;
+    private double doclen = 0.0;
 
 
     public stringPlate( String content, int df) {
@@ -30,10 +31,11 @@ public class stringPlate {
         this.paragraph = paragraph;
     }
 
-    public stringPlate(int docNumber, String content, int tf, String forIndex) {
+    public stringPlate(int docNumber, String content, int tf, double doclen, String forIndex) {
         this.docNumber = docNumber;
         this.content = content;
         this.tf = tf;
+        this.doclen = doclen;
     }
 
     public stringPlate(int docNumber, String content, int offset, double forOffset) {

@@ -245,7 +245,7 @@ public class DocumentParser_multi_nio_paragraph_ALLINONE {
 
 //                                allInOne_paragraph.add(paragraphStp);
                                 if (!forIndex.contains(term)) {
-                                    indexStp = new stringPlate(docId, term, allInOneIndexTf.get(term), "");
+                                    indexStp = new stringPlate(docId, term, allInOneIndexTf.get(term), 0.0, "");
                                     if (!indexStp.equals((Object)null)) {
                                         allInOne_Index.add(indexStp);
 //                                            System.out.println(indexStp.getContent());
@@ -266,7 +266,6 @@ public class DocumentParser_multi_nio_paragraph_ALLINONE {
                         for(String strr : allInOneIndexTf.keySet()){
                             System.out.println("allInOneIndexTf term: " + strr);
                             System.out.println("allInOneIndexTf num: " + allInOneIndexTf.get(strr));
-
                         }
 
                         for(int ind = 0; ind< allInOneIndexTf.size(); ind++){
@@ -426,7 +425,6 @@ public class DocumentParser_multi_nio_paragraph_ALLINONE {
 //        } catch (SQLException var11) {
 //            var11.printStackTrace();
 //        }
-
 
         endTime = System.currentTimeMillis();
         String output = "Expended totalTime is " + (double)(endTime - startTime) / 1000.0D;
